@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 var path = require('path')
 
-const port = 3000
+const PORT = process.env.PORT
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
@@ -14,7 +14,7 @@ app.get('/', (request, response) => {
 })
 
 app.use('/api', require('./router/index'))
-app.listen(port, () => {
+app.listen(PORT, () => {
     //console.log(`Servidor escuchando en http://localhost:${port}`)
-    console.log(`Corriendo en el puerto ` {process.env.PORT})
+    console.log(`Corriendo en el puerto ${PORT}`)
 })

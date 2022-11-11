@@ -7,13 +7,13 @@ const orderModel = require('../models/order.js')
 
 const sequelize = new Sequelize(
   'Store',
-  'postgres',
+  'root',
   '2940',
   {
     host: 'localhost',
-    dialect: 'postgres',
-    port: 5432,
-    logging: false
+    dialect: 'mysql',
+    port: 33061,
+    logging: true
   }
 )
 const models = [ productModel, reviewModel, userModel, orderModel ]
